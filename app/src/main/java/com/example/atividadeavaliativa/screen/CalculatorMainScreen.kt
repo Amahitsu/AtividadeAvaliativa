@@ -89,6 +89,9 @@ fun CalculatorApp(viewModel: CalculatorViewModel = viewModel()) {
                     onValueChange = {},
                     label = { Text(" R$ ${"%.2f".format(fixedTip)}") },
                 )
+
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(text="Valor total")
                 OutlinedTextField(
                     value = "",
                     onValueChange = {},
@@ -112,11 +115,17 @@ fun CalculatorApp(viewModel: CalculatorViewModel = viewModel()) {
                     label = {Text(" R$ ${"%.2f".format(customTip)}")}
                 )
 
+                Spacer(modifier = Modifier.height(16.dp))
+                Column {
+
+                Text(text="Valor total")
+
                 OutlinedTextField(
                     value = "",
                     onValueChange = {},
                     label = {Text(" R$ ${"%.2f".format(customTotal)}")}
                 )
+                }
             }
         }
     }
